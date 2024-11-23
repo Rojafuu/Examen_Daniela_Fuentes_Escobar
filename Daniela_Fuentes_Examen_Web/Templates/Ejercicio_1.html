@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  <!-- Define la codificación de caracteres para el archivo HTML como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Asegura que la página se vea correctamente en dispositivos móviles -->
+    <title>Ejercicio_1</title>  <!-- Título que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="/static/css/Ejercicio_1.css">  <!-- Enlaza el archivo CSS específico para este ejercicio -->
+</head>
+<body>
+    <!-- Contenedor principal donde se muestra el formulario y los resultados -->
+    <div class="container">
+        <h1>Calculo de compras</h1> <!-- Título principal de la página -->
+
+        <br>  <!-- Salto de línea -->
+
+        <!-- Formulario que se envía por POST para calcular el total a pagar -->
+        <form method="POST">
+            <!-- Grupo de formulario para ingresar el nombre del cliente -->
+            <div class="form-group">
+                <label for="nombre">Ingresa tu nombre </label> <!-- Etiqueta para el campo de nombre -->
+                <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto para el nombre del cliente -->
+            </div>
+
+            <!-- Grupo de formulario para ingresar la edad del cliente -->
+            <div class="form-group">
+                <label for="edad">Ingresa tu edad </label> <!-- Etiqueta para el campo de edad -->
+                <input type="number" id="edad" name="edad" required> <!-- Campo de número para la edad del cliente -->
+            </div>
+
+            <!-- Grupo de formulario para ingresar la cantidad de tarros de pintura -->
+            <div class="form-group">
+                <label for="cantidad_tarros">Ingresa la cantidad de tarros de pintura a comprar </label> <!-- Etiqueta para el campo de cantidad de tarros -->
+                <input type="number" id="cantidad_tarros" name="cantidad_tarros" required> <!-- Campo de número para la cantidad de tarros -->
+            </div>
+
+            <br> <!-- Salto de línea -->
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Calcular </button>  <!-- Botón para calcular el total -->
+        </form>
+    </div>
+
+    <!-- Este bloque se muestra solo si hay un nombre de cliente ingresado -->
+    {% if nombre %}
+    <div class="resultado"> <!-- Contenedor para mostrar los resultados -->
+        <!-- Muestra el nombre del cliente -->
+        <p>Nombre del cliente: {{ nombre }}</p>
+
+        <!-- Muestra el total sin descuento -->
+        <p>Total sin descuento:${{ total_sin_descuento }}</p>
+
+        <!-- Muestra el descuento en dinero -->
+        <p>El descuento es : ${{ descuento_en_dinero }}</p>
+
+        <!-- Muestra el total a pagar después de aplicar el descuento -->
+        <p>El total a pagar es de: ${{ total_con_descuento }}</p>
+
+        <br> <!-- Salto de línea -->
+    </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Definición del tipo de documento y la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Metaetiqueta para asegurar que la vista sea adaptativa en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Ejercicio_2</title>
+    <!-- Enlace al archivo CSS que define el estilo de la página -->
+    <link rel="stylesheet" href="/static/css/Ejercicio_2.css">
+</head>
+<body>
+    <!-- Contenedor principal de la página -->
+    <div class="container">
+        <!-- Título principal de la página -->
+        <h1>Inicio de sesión</h1> <br>
+
+        <!-- Formulario para ingresar el nombre de usuario y la contraseña -->
+        <form method="POST">
+            <!-- Contenedor para el campo del nombre de usuario -->
+            <div class="form-group">
+                <!-- Etiqueta para el campo del nombre de usuario -->
+                <label for="usuario">Ingresa tu nombre </label>
+                <!-- Campo de entrada para el nombre de usuario -->
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+
+            <!-- Contenedor para el campo de la contraseña -->
+            <div class="form-group">
+                <!-- Etiqueta para el campo de la contraseña -->
+                <label for="contrasena">Ingresa tu Contraseña</label>
+                <!-- Campo de entrada para la contraseña con tipo password (oculta el texto ingresado) -->
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit"> Verificar </button>
+        </form>
+
+        <!-- Bloque para mostrar mensajes flash (informativos) -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <!-- Si hay mensajes flash, se muestran en una lista -->
+                <ul class="flash-messages">
+                    <!-- Iteramos sobre los mensajes para mostrarlos -->
+                    {% for category, message in messages %} <br>
+                        <!-- Cada mensaje tiene una clase específica según su categoría (success, error, etc.) -->
+                        <li class="flash {{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Bloque para mostrar un mensaje de bienvenida -->
+        {% if mensaje_bienvenida %}
+            <!-- Si existe el mensaje de bienvenida, se muestra en esta sección -->
+            <div class="welcome-message">
+                <p>{{ mensaje_bienvenida }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

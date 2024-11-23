@@ -1,0 +1,86 @@
+/* Reset de márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0;  /* Elimina márgenes por defecto de todos los elementos */
+    padding: 0;  /* Elimina padding por defecto de todos los elementos */
+    box-sizing: border-box;  /* Asegura que el padding y el borde no afecten al tamaño total del elemento */
+}
+
+/* Fuente Arial global */
+body {
+    font-family: "Arial", sans-serif; /* Cambié la fuente a Arial para una apariencia más moderna y clara */
+    background-color: #f4f4f4;  /* Color de fondo gris claro para toda la página */
+    margin: 0;  /* Elimina márgenes por defecto */
+    padding: 0;  /* Elimina padding por defecto */
+    display: flex;  /* Utiliza el modelo Flexbox para un diseño flexible */
+    flex-direction: column;  /* Apila los elementos verticalmente */
+    justify-content: flex-start;  /* Alinea los elementos al principio del contenedor */
+    align-items: center;  /* Centra horizontalmente los elementos dentro del contenedor */
+    height: 100vh;  /* Hace que el contenedor ocupe el 100% de la altura de la ventana del navegador */
+}
+
+/* Contenedor principal centrado con un diseño limpio */
+.container {
+    max-width: 400px;  /* Establece el ancho máximo del contenedor, garantizando que no ocupe más de 400px */
+    width: 100%;  /* Hace que el contenedor ocupe el 100% del ancho disponible (hasta 400px) */
+    padding: 30px;  /* Añade un padding de 30px dentro del contenedor para crear espacio alrededor del contenido */
+    background-color: #fff;  /* Fondo blanco para el contenedor */
+    border-radius: 0px;  /* Bordes sin redondeo, manteniendo las esquinas cuadradas */
+    text-align: center;  /* Centra el texto dentro del contenedor */
+    box-shadow: none;  /* Sin sombra en el contenedor */
+    border: none;  /* Sin borde */
+    display: flex;  /* Utiliza Flexbox para la distribución interna */
+    flex-direction: column;  /* Organiza los elementos dentro del contenedor de manera vertical */
+}
+
+/* Estilo de los inputs del formulario */
+input[type="text"], input[type="number"] {
+    width: 100%;  /* Los campos de entrada ocuparán el 100% del ancho del contenedor */
+    padding: 12px;  /* Espaciado interno de 12px para los campos de texto */
+    margin: 10px 0;  /* Margen de 10px arriba y abajo de cada campo */
+    border: 1px solid #ccc;  /* Borde gris claro para los campos de entrada */
+    border-radius: 5px;  /* Bordes redondeados de 5px */
+    font-size: 16px;  /* Tamaño de la fuente en los campos de entrada */
+    display: block;  /* Hace que cada campo se comporté como un bloque (ocupa toda la línea) */
+    margin-left: auto;  /* Centra los campos horizontalmente */
+    margin-right: auto;  /* Centra los campos horizontalmente */
+}
+
+/* Estilo de las etiquetas de los inputs */
+label {
+    font-size: 14px;  /* Tamaño de fuente más pequeño para las etiquetas */
+    margin-bottom: 8px;  /* Espacio de 8px debajo de la etiqueta */
+    display: block;  /* Hace que la etiqueta se comporte como un bloque (ocupa toda la línea) */
+}
+
+/* Estilo del botón Calcular */
+button[type="submit"] {
+    background-color: #3399ff;  /* Color de fondo azul claro para el botón */
+    color: white;  /* Color del texto en el botón (blanco) */
+    border: none;  /* Elimina el borde del botón */
+    padding: 10px 25px;  /* Padding interno de 10px arriba y abajo, 25px a los lados */
+    font-size: 14px;  /* Tamaño de la fuente para el texto del botón */
+    font-weight: bold;  /* Negrita para el texto */
+    border-radius: 2px;  /* Bordes ligeramente redondeados de 2px */
+    cursor: pointer;  /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+    font-weight: normal;  /* Asegura que el peso de la fuente del texto en el botón sea normal */
+}
+
+/* Estilo para los resultados */
+.resultado {
+    padding: 20px 25px;  /* Padding de 20px arriba y abajo, 25px a los lados */
+    background-color: #ffffff;  /* Fondo blanco para la sección de resultados */
+    border-radius: 0px;  /* Bordes sin redondeo, manteniendo las esquinas cuadradas */
+    width: 100%;  /* Asegura que los resultados ocupen todo el ancho disponible */
+    max-width: 400px;  /* Limita el ancho máximo de la sección de resultados a 400px */
+    border: none;  /* Sin borde alrededor de los resultados */
+    box-shadow: none;  /* Sin sombra en la sección de resultados */
+    font-weight: normal;  /* Establece un peso de fuente normal para los resultados */
+    line-height: 1.5;  /* Espaciado de línea de 1.5 para facilitar la lectura */
+    /* Eliminamos el margin-top para que no haya espacio entre el formulario y los resultados */
+}
+
+/* Estilo para los párrafos dentro de .resultado */
+.resultado p {
+    font-size: 14px;  /* Tamaño de fuente consistente para los párrafos */
+    margin-bottom: 10px;  /* Espaciado de 10px entre los párrafos dentro de los resultados */
+}

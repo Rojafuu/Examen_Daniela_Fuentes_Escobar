@@ -1,0 +1,108 @@
+/* Reset de márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente Arial global */
+body {
+    font-family: "Arial", sans-serif; /* Cambié la fuente a Arial */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* Apilar los elementos verticalmente */
+    justify-content: flex-start;  /* Alinea los elementos al principio del contenedor */
+    align-items: center;  /* Centra horizontalmente */
+    height: 100vh;
+}
+
+/* Contenedor principal centrado con un diseño limpio */
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;  /* Bordes ligeramente redondeados */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los inputs del formulario */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave en el borde y sombra */
+}
+
+/* Estilo de las etiquetas de los inputs */
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Estilo del texto de "Inicio de sesión" */
+h1 {
+    font-size: 22px;  /* Tamaño más pequeño para el título de inicio de sesión */
+    margin-bottom: 20px;  /* Espacio debajo del título */
+}
+
+/* Estilo del botón Verificar */
+button[type="submit"] {
+    background-color: #3399ff;  /* Azul claro */
+    color: white;  /* Letras blancas */
+    border: none;
+    padding: 10px 25px;  /* Tamaño del botón */
+    font-size: 14px;
+    font-weight: normal;  /* Elimina la negrita */
+    border-radius: 2px;  /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave en el fondo y escala */
+}
+
+/* Estilo para los mensajes de bienvenida */
+.welcome-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Estilo para los mensajes de error */
+.flash.error {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los mensajes de éxito */
+.flash.success {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo para eliminar las viñetas y márgenes/paddings en las listas */
+ul.flash-messages {
+    list-style-type: none;  /* Elimina las viñetas */
+    padding: 0;  /* Elimina el padding */
+    margin: 0;  /* Elimina el margen */
+}
+
+/* Estilo para los <li> dentro de las listas */
+ul.flash-messages li {
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+}

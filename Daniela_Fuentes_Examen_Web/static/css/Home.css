@@ -1,0 +1,72 @@
+/* Reset de márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0; /* Elimina el margen de todos los elementos */
+    padding: 0; /* Elimina el padding de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y borde en el cálculo del tamaño del elemento */
+}
+
+body {
+    font-family: "Times New Roman", serif;  /* Establece la fuente principal de la página a 'Times New Roman' */
+    background-color: #f4f4f4;  /* Establece un fondo gris claro para toda la página */
+    margin: 0;  /* Elimina cualquier margen predeterminado en el body */
+    padding: 0;  /* Elimina cualquier padding predeterminado en el body */
+
+    /* Configura el layout del body para que el contenido esté centrado */
+    display: flex;  /* Usamos Flexbox para el diseño */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;  /* Centra el contenido verticalmente */
+    height: 100vh;  /* La altura es del 100% de la ventana del navegador */
+}
+
+/* Contenedor principal centrado con un diseño limpio */
+.container {
+    max-width: 600px;  /* El contenedor no será más ancho que 600px */
+    width: 100%;  /* El contenedor puede tomar hasta el 100% del ancho disponible, pero limitado por max-width */
+    padding: 30px;  /* Añade un padding de 30px dentro del contenedor */
+    background-color: transparent;  /* Fondo transparente para el contenedor */
+    border-radius: 0px;  /* Sin bordes redondeados */
+    text-align: center;  /* Centra el texto dentro del contenedor */
+}
+
+/* Contenedor para los botones en una fila horizontal */
+.button-container {
+    display: flex;  /* Usamos Flexbox para distribuir los botones */
+    justify-content: center;  /* Centra los botones horizontalmente */
+    gap: 20px;  /* Añade un espacio de 20px entre cada botón */
+}
+
+/* Estilo común para los botones */
+button[type="submit"] {
+    color: white;  /* El texto de los botones será blanco */
+    border: none;  /* Elimina el borde predeterminado de los botones */
+
+    /* Definimos el tamaño del padding para aumentar la altura y reducir el ancho */
+    padding: 50px 30px;  /* 50px de altura y 30px de ancho (aumentando la altura de los botones) */
+
+    font-size: 24px;  /* Tamaño de fuente más grande para los botones */
+
+    width: auto;  /* El ancho de los botones será automático según el contenido */
+    text-decoration: none;  /* Elimina cualquier subrayado que podría tener el texto */
+    cursor: pointer;  /* Cambia el cursor a una mano cuando se pasa por encima del botón */
+
+    /* Añade una transición suave para los efectos hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo para el botón de Ejercicio 1 (morado más claro) */
+.morado {
+    background-color: #a14db2;   /* Morado más claro para el botón de Ejercicio 1 */
+}
+
+/* Estilo para el botón de Ejercicio 2 (verde más amarillento) */
+.verde {
+    background-color: #b0e173; /* Verde pistacho más amarillento para el botón de Ejercicio 2 */
+}
+
+/* Asegurar que los botones estén centrados y bien distribuidos */
+form {
+    display: flex;  /* Usamos Flexbox para distribuir los elementos dentro del formulario */
+    flex-direction: column;  /* Coloca los botones en una columna (de arriba hacia abajo) */
+    justify-content: center;  /* Centra los botones verticalmente dentro del formulario */
+    align-items: center;  /* Centra los botones horizontalmente dentro del formulario */
+}
